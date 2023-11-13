@@ -1,0 +1,7 @@
+{
+  "name": "SmartLocker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
