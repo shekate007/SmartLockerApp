@@ -1,0 +1,50 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Felix & Goerge Company</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-chip>
+          <ion-avatar>
+            <ion-img src="/assets/SmartLockerIcon.png"></ion-img>
+          </ion-avatar>
+          <ion-label style="font-size: medium; font-weight: bold;">SmartLocker</ion-label>
+        </ion-chip>
+        <br/>
+        <br/>
+        <br/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+          <ion-item>
+            <ion-input type="email" name="email" label="Email" labelPlacement="floating" placeholder="email..."
+              [(ngModel)]="user.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" mode="md"
+              required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" name="password" [(ngModel)]="user.password" label="Password"
+              labelPlacement="floating" placeholder="password..." mode="md" required></ion-input>
+          </ion-item>
+          <br />
+          <ion-button type="submit" [disabled]="form.invalid" expand="block">
+            Login
+          </ion-button>
+        </form>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border" mode="md">
+  <ion-toolbar>
+    <ion-title style="font-size: small;">Ⓒ2023 CETI. All rights reserved.</ion-title>
+  </ion-toolbar>
+</ion-footer>

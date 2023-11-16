@@ -1,0 +1,66 @@
+<ion-header [translucent]="true" class="ion-no-border ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Panel de Control
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row style="margin-bottom: 50px;">
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <ion-button (click)="open()" expand="block" color="tertiary" shape="round">
+          <ion-icon slot="start" name="lock-open-outline"></ion-icon>
+          Abrir Locker
+        </ion-button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row style="margin-bottom: 50px;">
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <ion-button (click)="close()" expand="block" color="tertiary" shape="round">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          Cerrar Locker
+        </ion-button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row style="margin-bottom: 50px;">
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <ion-button expand="block" color="tertiary" shape="round">
+          <ion-icon slot="start" name="shield-checkmark-outline"></ion-icon>
+          Status
+        </ion-button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row style="margin-bottom: 50px;">
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <ion-button expand="block" color="tertiary" shape="round">
+          <ion-icon slot="start" name="reader-outline"></ion-icon>
+          Historial de Sucesos
+        </ion-button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row style="margin-bottom: 50px;">
+      <ion-col size="7"></ion-col>
+      <ion-col size="4">
+        <ion-button (click)="exit()" expand="block" color="tertiary" shape="round">
+          <ion-icon slot="start" name="exit-outline"></ion-icon>
+          Salir
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
