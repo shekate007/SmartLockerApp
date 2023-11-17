@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlApi: 'http://192.168.137.51:80'
+  urlApi: 'http://locket:80'
 };
 
 /*

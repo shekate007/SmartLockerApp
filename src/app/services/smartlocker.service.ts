@@ -20,9 +20,9 @@ export class SmartlockerService {
   constructor(private http: HttpClient) { }
 
   private executeQuery<T>(endpoint: string, signal: string) {
-    console.log('HTTP Request.');
+    console.log('HTTP Request.'); 
     this.http.post<T>(apiUrl + endpoint,
-      { data: 'signal' },
+      { signal },
       {}).subscribe(data => {
         console.log(data);
       }, error => {
