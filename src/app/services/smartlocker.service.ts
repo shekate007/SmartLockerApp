@@ -23,7 +23,11 @@ export class SmartlockerService {
     console.log('HTTP Request.'); 
     this.http.post<T>(apiUrl + endpoint,
       { signal },
-      {}).subscribe(data => {
+      {
+        headers: this.headers,
+        params: {'signal': signal}
+      },
+      ).subscribe(data => {
         console.log(data);
       }, error => {
         console.log(error);
